@@ -6,16 +6,20 @@ import Auth from './Auth'
 
 const Navigation = ({ location }) => {
 
-    const [signUp] = useState(true)
-    const [signIn] = useState(true)
+    const [signUp, setSignUp] = useState(false)
+    const [signIn, setSignIn] = useState(false)
     // const [isLogged] = useState(true)
     // const [isAdmin] = useState(true)
 
+    const handleCloseSignUp = () => setSignUp(false);
+    const handleShowSignUp = () => setSignUp(true);
+
+    const handleCloseSignIn = () => setSignIn(false);
+    const handleShowSignIn = () => setSignIn(true);
+
     const basicView = <>
-        {signUp && <Auth signup />}
-        <Nav.Link >Sign In</Nav.Link>
-        {signIn && <Auth signIn />}
-        <Nav.Link > Sign Up</Nav.Link>
+        <Nav.Link onClick={handleShowSignIn} > Logowanie </Nav.Link> {signIn && <Auth show={signIn} signIn={signIn} handleClose={handleCloseSignIn} />}
+        <Nav.Link onClick={handleShowSignUp} > Rejestracja </Nav.Link> {signUp && <Auth show={signUp} signUp={signUp} handleClose={handleCloseSignUp} />}
     </>
 
     const loggedView = <Nav.Link> Logout </Nav.Link>
