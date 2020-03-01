@@ -2,8 +2,8 @@ import React from 'react';
 
 import { ListGroup, Tab, Row, Col } from 'react-bootstrap';
 import ArticlesList from './ArticlesList'
-import UsersList from './UsersList'
-import Creator from './Creator'
+import UsersList from '../components/User/UsersList'
+import Creator from '../components/Article/Creator'
 // import { Route, Switch } from 'react-router-dom'
 // import { LinkContainer } from 'react-router-bootstrap'
 

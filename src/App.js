@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.css';
-import Navigation from './components/Navigation'
-import ArticlesList from './components/ArticlesList'
-import AdminPanel from './components/AdminPanel'
+import Navigation from './components/UIElements/Navigation'
+import ArticlesList from './pages/ArticlesList'
+import AdminPanel from './pages/AdminPanel'
 
 function App() {
 
